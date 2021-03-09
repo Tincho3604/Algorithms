@@ -1,0 +1,16 @@
+const changeDate = (date) => {
+  let arr = date.split('/');
+  let value = arr.pop();
+  arr.unshift(value)
+  for(let i=0; i<3; i++){
+    if(parseInt(arr[i]) < 10){
+      let index =  arr.indexOf(arr[i])
+      arr[index] = '0'+arr[i];
+    }
+  }
+  
+  return arr.join('')
+     
+  }
+
+  console.log(changeDate("13/21/2014"))
