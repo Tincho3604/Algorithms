@@ -1,0 +1,1 @@
+1) Ordenar alfabeticamente y por edad el archivo y luego hacer busqueda binaria.
