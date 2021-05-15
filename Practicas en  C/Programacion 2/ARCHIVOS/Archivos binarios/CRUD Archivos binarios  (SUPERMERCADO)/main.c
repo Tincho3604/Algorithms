@@ -228,7 +228,6 @@ void modificar(){
 	    }
     }
 
-
 	   if(existe == 0){
 	        printf("\nEl articulo no existe");	
 	    }
@@ -243,6 +242,12 @@ void modificar(){
 
 
 
+
+
+
+
+
+// BORRAR PRODUCTO 6 - Borrar articulo de la BD
 void borrar(){
 	FILE * arch, * archTemp;
 	struct PRODUCTO prod;
@@ -250,44 +255,58 @@ void borrar(){
     char opccionBorrar;
 	int cod;
 	
+		
 	
-	
-	
-	if((arch = fopen("producto", "r+b") == NULL){
+	if((arch = fopen("productos", "r+b")) == NULL){
 		printf("\nError al acceder al archivo");
 		exit(1);
 	}
 	
 	
-	
-	if((archTemp = ftemp()) == NULL){
-		printf("Error al acceder aa archivo temporal");
-		ecit(1);
+	if((archTemp = tmpfile()) == NULL){
+		printf("Error al acceder al archivo temporal");
+		exit(1);
 	}
-	
 	
 	
 	printf("\n\n");
+	printf("\nIntroduzca el codigo del producto a borrar: ");
+	scanf("%d", &cod);
 	
-	while(!feof(arch) && flag){
-		if(cod == prod.codigo){
-		   printf("\n %-20s %10s %10s", "CODIGO", "DESCRIPCCION", "PRECIO");
-		   
-		   printf("\n El producto seleccionado es: %10d %10s %10f",
-		   prod.codigo,prod.descripccion,prod.precio
-		   );
-		   
-		   printf("\n ¿Deseas Borrar el archivo? S/N ");
-		   opccionBorrar = getchar();
-		   
-		   if(opccionBorrar == 'S'){
-		      
-			  
-			    
-			        	
-		   }
-		}
+	fread(&prod, sizeof(prod), 1, arch);
+	while(!feof(arch)){
+		printf("dato");
+		if(cod != prod.codigo){
+			fwrite(&prod, sizeof(prod), 1, archTemp);
 	}
+	fread(&prod, sizeof(prod), 1, arch);
+  }
+  
+  fclose(arch);
+  
+  
+  	if((arch = fopen("productos", "wb")) == NULL){
+		printf("\nError al acceder al archivo");
+		exit(1);
+	}
+  
+
+    rewind(archTemp);
+
+  	fread(&prod, sizeof(prod), 1, archTemp);
+	while(!feof(archTemp)){
+			fwrite(&prod, sizeof(prod), 1, arch);
+			fread(&prod, sizeof(prod), 1, archTemp);
+  }
+    fclose(arch);
+    fclose(archTemp);
+    
+    printf("\nEl archivo se borro exitosamente: ");
+    
+	continuar();
+}
+
+
 
 
 
@@ -318,10 +337,10 @@ int main(){
     	case 4:
     		   consulta();
     		break;
-    	case 6:
+    	case 5:
     		  modificar();
     		break;
-    	case 7:
+    	case 6:
     		  borrar();
     		break;
     		
