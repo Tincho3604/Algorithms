@@ -6,9 +6,9 @@
    2. MOSTRAR LOS ARTICULOS CUYO STOCK ES MENOR QUE 8. --> ¡OK!
    3. DETERMINAR QUIEN ES EL PROVEEDOR QUE MAS ARTICULOS SUMINISTRA. --> ¡OK!
    4. PERMITIR EL INGRESO DE UN #ART Y BUSCARLO. --> ¡OK!
-   5. INDEXAR EL ARCHIVO.
-   6. ORDENAR EL INDICE.
-   7. REPETIR EL PUNTO 4 CON UNA BUSQUEDA BINARIA INDEXADA.
+   5. INDEXAR EL ARCHIVO. --> ¡OK!
+   6. ORDENAR EL INDICE. --> ¡OK!
+   7. REPETIR EL PUNTO 4 CON UNA BUSQUEDA BINARIA INDEXADA. 
 */
 
 
@@ -22,6 +22,14 @@ struct ARTI {
 	char FAB[50];
 	short int STOCK;
 };
+
+
+// Estrcutura archivo de indices
+struct INDEX_FILE{
+    short int ART;
+    int POS;
+};
+
 
 
 //1. HACER UN PROGRAMA DE LECTURA.
@@ -224,37 +232,103 @@ void BUSQUEDA_ART(FILE *FV){
 
 //  5. INDEXAR EL ARCHIVO.
 void INDEXAR_ARCHIVO(FILE *FV){
-	struct ARTI X;
+  struct ARTI X;
+  struct INDEX_FILE Y;
+
 	FILE * INDEX; 
 	int i, N;
+	int POS;
 	
 	if((FV = fopen("BDARTICULOS", "r+b")) == NULL){
 		printf("\nError al acceder al archivo");
 		exit(1);
 	}
 	
-	if((INDEX = tmpfile()) == NULL){
-		printf("\nError al acceder al archivo");
+	if((INDEX = fopen("indices", "r+b")) == NULL){
+		printf("\nError al acceder al archivo index");
 		exit(1);
 	}
 	
-	fseek(FV, 0,  SEEK_END);
-	N = ftell(FV)/sizeof(X);
-	
-	
-	fread(&X, sizeof(X), 1, FV);
-	for(i=0; i<N; i++){
-		fwrite(&X, sizeof(X), 1, INDEX);
+rewind(FV);
+
+
+  fread(&X, sizeof(X), 1, FV);
+	while(!feof(FV)){
+		Y.ART = X.ART;
+		Y.POS = (ftell(FV)/sizeof(X))-1;
+		fwrite(&Y, sizeof(Y), 1, INDEX);
 		fread(&X, sizeof(X), 1, FV);
 	}
-	
-	
-	
-	fclose(FV);
+
+
+		
+ rewind(INDEX);
+  fread(&Y, sizeof(Y), 1, INDEX);
+	printf("\n\n%-20s %10s", "ART", "POSICION");
+	   while(!feof(INDEX)){
+		printf("\n\n%10d %10d", Y.ART, Y.POS);
+		fread(&Y, sizeof(Y), 1, INDEX);
+	}
+
 	fclose(INDEX);
-	
+	fclose(FV);
 }
 
+
+
+
+// 6. ORDENAR EL INDICE.
+void ORDENAR_INDICES(){
+   
+   struct INDEX_FILE X, Y;
+   FILE * INDEX;
+   int N, i, j;
+   
+   if((INDEX = fopen("indices", "r+b")) == NULL){
+   	    printf("\n\nError al acceder al archivo indices");
+   	    exit(1);
+   }
+
+   fseek(INDEX, 0, SEEK_END);
+   N = ftell(INDEX)/sizeof(X);
+
+	
+	rewind(INDEX);
+	// ORDENAMIENTO
+ 	for(i=0; i<N-1; i++){
+		for(j=0; j<N-1-i; j++){
+			fread(&X, sizeof(X), 1, INDEX);
+			fread(&Y, sizeof(Y), 1, INDEX);
+            if(X.ART < Y.ART){
+               fseek(INDEX, (-2)*sizeof(X), SEEK_CUR);
+               
+			   fwrite(&Y, sizeof(Y), 1, INDEX);
+               fwrite(&X, sizeof(X), 1, INDEX);
+ 		    }	
+			 fseek(INDEX, (-1)*sizeof(X), SEEK_CUR);	
+		}
+		rewind(INDEX);
+	}
+	
+
+ rewind(INDEX);
+  fread(&Y, sizeof(Y), 1, INDEX);
+	printf("\n\n%-20s %10s", "ART", "POSICION");
+	   while(!feof(INDEX)){
+		printf("\n\n%10d %10d", Y.ART, Y.POS);
+		fread(&Y, sizeof(Y), 1, INDEX);
+	}
+
+	fclose(INDEX);
+}
+
+
+
+
+//7. REPETIR EL PUNTO 4 CON UNA BUSQUEDA BINARIA INDEXADA. 
+void BUSQUEDA_BINARIA(){
+     
+}
 
 
 int main(){
@@ -277,6 +351,7 @@ int main(){
     printf("Ingrese su opccion: ");
     scanf("%d", &op);
      	
+     	
     switch(op){
     	case 1: LEER(FP);
     		break;
@@ -293,10 +368,10 @@ int main(){
 		        INDEXAR_ARCHIVO(FP);
     	    break;
     	case 6: 
-		        printf("Funcionalidad no concretada");
+		        ORDENAR_INDICES();
     	    break;
     	case 7: 
-		        printf("Funcionalidad no concretada");
+		       BUSQUEDA_BINARIA();
     	    break;    
     	default:
     		printf("\nOpccion incorrecta");
