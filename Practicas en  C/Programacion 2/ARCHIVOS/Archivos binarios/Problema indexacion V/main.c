@@ -4,8 +4,8 @@
 /*
    1. HACER UN PROGRAMA DE LECTURA. ---> ¡OK!
    2. MOSTRAR LOS ARTICULOS CUYO STOCK ES MENOR QUE 8. --> ¡OK!
-   3. DETERMINAR QUIEN ES EL PROVEEDOR QUE MAS ARTICULOS SUMINISTRA. 
-   4. PERMITIR EL INGRESO DE UN #ART Y BUSCARLO.
+   3. DETERMINAR QUIEN ES EL PROVEEDOR QUE MAS ARTICULOS SUMINISTRA. --> ¡OK!
+   4. PERMITIR EL INGRESO DE UN #ART Y BUSCARLO. --> ¡OK!
    5. INDEXAR EL ARCHIVO.
    6. ORDENAR EL INDICE.
    7. REPETIR EL PUNTO 4 CON UNA BUSQUEDA BINARIA INDEXADA.
@@ -175,11 +175,85 @@ void PROVEEDOR_MAS_ARTICULOS(FILE *FV){
 }
 
 
-//3. DETERMINAR QUIEN ES EL PROVEEDOR QUE MAS ARTICULOS SUMINISTRA.
 
 
 
 
+
+
+
+
+//4. PERMITIR EL INGRESO DE UN #ART Y BUSCARLO.
+
+void BUSQUEDA_ART(FILE *FV){
+	struct ARTI X;
+	int i, j;
+	short int op;
+	
+	if((FV = fopen("BDARTICULOS","rb")) == NULL){
+		printf("Error al acceder al archivo");
+		exit(1);
+	}
+
+	
+    printf("\nIngrese el articulo que desea buscar: ");
+    scanf("%d", &op);
+			
+	
+	fread(&X, sizeof(X), 1, FV);
+		printf("\n\n%20s %20s\t %20s \t%20s %20s\t", 
+	        "ART", "COD", "DESC", "FAB", "STOCK");	
+	while(!feof(FV)){
+		
+		if(X.ART == op){
+			printf("\n El articulo seleccionado es: ");
+			printf("\n\n\n\t%10d %20s\t\t %20s %20s %10d",
+		    X.ART,X.COD,X.DESC,X.FAB,X.STOCK);
+       }
+       	fread(&X, sizeof(X), 1, FV);
+	}
+	fclose(FV);
+}
+
+
+
+
+
+
+
+
+//  5. INDEXAR EL ARCHIVO.
+void INDEXAR_ARCHIVO(FILE *FV){
+	struct ARTI X;
+	FILE * INDEX; 
+	int i, N;
+	
+	if((FV = fopen("BDARTICULOS", "r+b")) == NULL){
+		printf("\nError al acceder al archivo");
+		exit(1);
+	}
+	
+	if((INDEX = tmpfile()) == NULL){
+		printf("\nError al acceder al archivo");
+		exit(1);
+	}
+	
+	fseek(FV, 0,  SEEK_END);
+	N = ftell(FV)/sizeof(X);
+	
+	
+	fread(&X, sizeof(X), 1, FV);
+	for(i=0; i<N; i++){
+		fwrite(&X, sizeof(X), 1, INDEX);
+		fread(&X, sizeof(X), 1, FV);
+	}
+	
+	
+	
+	fclose(FV);
+	fclose(INDEX);
+	
+}
 
 
 
@@ -194,6 +268,11 @@ int main(){
     printf("1 - Leer listado de articulos: \n");
     printf("2 - Leer listado de productos cuyo stock sea menor que 8: \n");
     printf("3 - Leer PROVEEDOR MAS ARTICULOS:  \n");
+    printf("4 - Permitir el ingreso de un #ART y buscarlo:  \n");
+    printf("5 - Indexar archivo:  \n");
+    printf("6 - Ordenar el indice:  \n");
+    printf("7 - Repetir el punto 4 con una busqueda binaria indexada:  \n");
+    printf("8 - Salir:  \n");
     printf("\n");
     printf("Ingrese su opccion: ");
     scanf("%d", &op);
@@ -207,14 +286,24 @@ int main(){
         case 3:
         	   PROVEEDOR_MAS_ARTICULOS(FP);
     		break;
+    	case 4: 
+		        BUSQUEDA_ART(FP);
+    	    break;
+    	case 5: 
+		        INDEXAR_ARCHIVO(FP);
+    	    break;
+    	case 6: 
+		        printf("Funcionalidad no concretada");
+    	    break;
+    	case 7: 
+		        printf("Funcionalidad no concretada");
+    	    break;    
     	default:
     		printf("\nOpccion incorrecta");
     	break;
 	      }
 	     
-       
- 
-    }while(op != 4);
+    }while(op != 8);
 
 
  return 0;
