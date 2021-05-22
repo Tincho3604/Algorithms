@@ -1,0 +1,38 @@
+﻿Se cuenta con un archivo ATLETAS, conteniendo información de un Juego Olímpico en registros con esta forma:
+
+struct atleta {
+		char NOMBRE[50];
+		char DISCIPLINA[30];
+		int ORO;
+		int PLATA;
+		int BRONCE;
+};
+
+Este archivo indica las medallas obtenidas por los atletas en cada disciplina. 
+ORO, PLATA y BRONCE tienen un 1 si el atleta la obtuvo, ó 0 en caso contrario.
+Un atleta, en una disciplina, puede ganar una de estas medallas o bien ninguna.
+
+Por otro lado, se cuenta con un archivo DISCIPLINAS, con registros de esta forma:
+
+struct disciplina {
+		char NOMBRE[30];
+		char ORO[50];
+};
+
+El archivo DISCIPLINAS solamente tiene los nombres de ellas, el campo ORO está vacio.
+
+
+Se pide, en un solo programa:
+
+1) Imprimir en pantalla los ATLETAS, para verificar que la lectura del archivo es correcta y visualizar los datos.
+
+2) Actualizar el archivo DISCIPLINAS para que contenga en el campo ORO el nombre del atleta que lo obtuvo.
+
+3) Mostrar en pantalla el archivo DISCIPLINAS para corroborar los resultados.
+
+4) Mostrar en pantalla los nombres de los atletas sin repetir.
+No modificar el archivo ATLETAS original.
+En el ejemplo proporcionado Pepe Gomez y Maria Perez compitieron en varias disciplinas (no deben verse repetidos).
+
+
+Los archivos proporcionados son ejemplos con resultados conocidos. La prueba se hará con otros datos desconocidos.

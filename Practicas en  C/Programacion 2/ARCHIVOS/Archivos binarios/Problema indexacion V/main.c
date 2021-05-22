@@ -327,7 +327,9 @@ void ORDENAR_INDICES(){
 
 //7. REPETIR EL PUNTO 4 CON UNA BUSQUEDA BINARIA INDEXADA. 
 void BUSQUEDA_BINARIA(){
-     
+      struct ARTI X;
+      struct INDEX_FILE Y;
+	   
 }
 
 
