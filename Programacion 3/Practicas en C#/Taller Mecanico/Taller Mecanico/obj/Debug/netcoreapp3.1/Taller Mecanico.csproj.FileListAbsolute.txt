@@ -11,3 +11,16 @@ C:\Users\Tincho\source\repos\Taller Mecanico\Taller Mecanico\obj\Debug\netcoreap
 C:\Users\Tincho\source\repos\Taller Mecanico\Taller Mecanico\obj\Debug\netcoreapp3.1\Taller Mecanico.dll
 C:\Users\Tincho\source\repos\Taller Mecanico\Taller Mecanico\obj\Debug\netcoreapp3.1\Taller Mecanico.pdb
 C:\Users\Tincho\source\repos\Taller Mecanico\Taller Mecanico\obj\Debug\netcoreapp3.1\Taller Mecanico.genruntimeconfig.cache
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Practicas en C#\Taller Mecanico\Taller Mecanico\bin\Debug\netcoreapp3.1\Taller Mecanico.exe
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Practicas en C#\Taller Mecanico\Taller Mecanico\bin\Debug\netcoreapp3.1\Taller Mecanico.deps.json
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Practicas en C#\Taller Mecanico\Taller Mecanico\bin\Debug\netcoreapp3.1\Taller Mecanico.runtimeconfig.json
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Practicas en C#\Taller Mecanico\Taller Mecanico\bin\Debug\netcoreapp3.1\Taller Mecanico.runtimeconfig.dev.json
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Practicas en C#\Taller Mecanico\Taller Mecanico\bin\Debug\netcoreapp3.1\Taller Mecanico.dll
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Practicas en C#\Taller Mecanico\Taller Mecanico\bin\Debug\netcoreapp3.1\Taller Mecanico.pdb
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Practicas en C#\Taller Mecanico\Taller Mecanico\obj\Debug\netcoreapp3.1\Taller Mecanico.csprojAssemblyReference.cache
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Practicas en C#\Taller Mecanico\Taller Mecanico\obj\Debug\netcoreapp3.1\Taller Mecanico.AssemblyInfoInputs.cache
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Practicas en C#\Taller Mecanico\Taller Mecanico\obj\Debug\netcoreapp3.1\Taller Mecanico.AssemblyInfo.cs
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Practicas en C#\Taller Mecanico\Taller Mecanico\obj\Debug\netcoreapp3.1\Taller Mecanico.csproj.CoreCompileInputs.cache
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Practicas en C#\Taller Mecanico\Taller Mecanico\obj\Debug\netcoreapp3.1\Taller Mecanico.dll
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Practicas en C#\Taller Mecanico\Taller Mecanico\obj\Debug\netcoreapp3.1\Taller Mecanico.pdb
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Practicas en C#\Taller Mecanico\Taller Mecanico\obj\Debug\netcoreapp3.1\Taller Mecanico.genruntimeconfig.cache

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tincho\\source\\repos\\Taller Mecanico\\Taller Mecanico\\Taller Mecanico.csproj": {}
+    "C:\\Users\\Tincho\\Desktop\\Archivos\\Repositorios\\Algorithms\\Programacion 3\\Practicas en C#\\Taller Mecanico\\Taller Mecanico\\Taller Mecanico.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tincho\\source\\repos\\Taller Mecanico\\Taller Mecanico\\Taller Mecanico.csproj": {
+    "C:\\Users\\Tincho\\Desktop\\Archivos\\Repositorios\\Algorithms\\Programacion 3\\Practicas en C#\\Taller Mecanico\\Taller Mecanico\\Taller Mecanico.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tincho\\source\\repos\\Taller Mecanico\\Taller Mecanico\\Taller Mecanico.csproj",
+        "projectUniqueName": "C:\\Users\\Tincho\\Desktop\\Archivos\\Repositorios\\Algorithms\\Programacion 3\\Practicas en C#\\Taller Mecanico\\Taller Mecanico\\Taller Mecanico.csproj",
         "projectName": "Taller Mecanico",
-        "projectPath": "C:\\Users\\Tincho\\source\\repos\\Taller Mecanico\\Taller Mecanico\\Taller Mecanico.csproj",
+        "projectPath": "C:\\Users\\Tincho\\Desktop\\Archivos\\Repositorios\\Algorithms\\Programacion 3\\Practicas en C#\\Taller Mecanico\\Taller Mecanico\\Taller Mecanico.csproj",
         "packagesPath": "C:\\Users\\Tincho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tincho\\source\\repos\\Taller Mecanico\\Taller Mecanico\\obj\\",
+        "outputPath": "C:\\Users\\Tincho\\Desktop\\Archivos\\Repositorios\\Algorithms\\Programacion 3\\Practicas en C#\\Taller Mecanico\\Taller Mecanico\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tincho\\AppData\\Roaming\\NuGet\\NuGet.Config",
