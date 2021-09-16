@@ -1,0 +1,40 @@
+
+
+1) Se desea hacer un programa que permita el ingreso de datos de VENTAS de una empresa en varios PAISES.
+El usuario ingresará la cantidad de unidades vendidas, el nombre del vendedor y el nombre del pais. 
+Esto se repite hasta que la cantidad sea -1, indicando el fin del ingreso.
+Se deben crear simultaneamente DOS archivos binarios: uno para las VENTAS y otro para los PAISES.
+Esto quiere decir que el nombre del PAIS no se guarda en el archivo de VENTAS sino que a cada pais el programa le asignará un código numérico (entero correlativo partiendo de 1), se lo guarda en el archivo de PAISES y ese código numérico es el que se almacena en el archivo de VENTAS.
+
+El archivo de PAISES no debe tener paises repetidos. Si se ingresa una venta en un PAIS que ya existe en el archivo de PAISES, se debe utilizar ese código existente para guardarlo en VENTAS.
+
+No se sabe cuántas ventas ni cuántos paises distintos se ingresarán.
+
+Ambos archivos se crearán desde cero, tomando los datos que el usuario ingresa.
+
+Por ejemplo, para este ingreso:
+
+100 GOMEZ ARGENTINA
+200 PEREZ BRASIL
+50  PEREZ ARGENTINA
+-1
+
+el archivo de PAISES debe quedar:
+1 ARGENTINA
+2 BRASIL
+
+y el de VENTAS:
+100 GOMEZ 1
+200 PEREZ 2
+50  PEREZ 1
+
+
+
+2) Agregue al programa anterior que, al finalizar el ingreso, se cierren los flujos y se vuelvan a abrir en modo lectura. Muestre en pantalla el contenido de ambos archivos.
+
+
+
+-Es deseable elegir buenos nombres para variables y funciones.
+-Es obligatorio tabular correctamente el código.
+-No se pueden utilizar elementos NO vistos en clase.
+
