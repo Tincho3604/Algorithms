@@ -248,6 +248,7 @@ int main () {
             fread(&X, sizeof(X),1, FP);   //J
             fread(&Y, sizeof(Y),1, FP);   //J+1
 
+<<<<<<< HEAD
             if (strcmp(X.nombre, Y.nombre) == 1 || strcmp(X.nombre, Y.nombre) == 0 && strcmp(X.nombre, Y.nombre) == 1){
                 fseek(FP, (-2)*sizeof(X), SEEK_CUR); //VUELVO A J
                 fwrite(&Y, sizeof(Y), 1, FP); //J
@@ -255,6 +256,17 @@ int main () {
             }
             fseek(FP, sizeof(X)*(-1), SEEK_CUR);
 
+=======
+            if (strcmp(X.nombre, Y.nombre) > 0) {
+                fseek(FP, (-2)*sizeof(X), SEEK_CUR); //VUELVO A J
+                fwrite(&Y, sizeof(Y), 1, FP); //J
+                fwrite(&X, sizeof(X), 1, FP); //J+1
+                
+                fseek(FP, sizeof(X)*(-1), SEEK_CUR);
+            }else{
+            	fseek(FP, sizeof(X)*(-1), SEEK_CUR);
+			}
+>>>>>>> 57b80b0e65c80048811883518d13bb48f02bf170
         }
     }
 

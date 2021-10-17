@@ -1,0 +1,13 @@
+La clase LISTA esta formada por  un puntero a la clase NODO (privado) y las funciones  asociadas.
+La clase NODO esta compuesta por los miembros públicos NOM (string de 20) y el puntero SIG (CANDI *), más las funciones asociadas.
+La lista contiene nombres que no guardan ningún orden y aparecen repetidos.
+Se pide construir la función LISTA::DEPURA(), que depurará la lista de manera de dejar un nodo por cada nombre, eliminando los repetidos. 
+Construir asimismo, el destructor de la clase LISTA.
+
+
+
+
+
+
+Se recibirá el voto del público para determinar quienes fueron las 10 personalidades del año. Los nombres de los candidatos se recibirán hasta que se ingrese palabra “FIN”. Cada nombre recibido equivale a un voto. Si el candidato votado no existe en la lista , se lo debe dar de alta y contabilizar el voto. Si existe, se debe actualizar la cantidad de votos que tiene. (En este caso NO se debe crear un nuevo nodo).
+Determinar el ganador (considerándolo único) y sus votos.
