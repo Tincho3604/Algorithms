@@ -1,0 +1,3 @@
+ ARGENTINA 	 22 	 22 	 22 
+ ALEMANIA 	 88 	 0 	 44 
+ CHINA 	 22 	 22 	 44 
