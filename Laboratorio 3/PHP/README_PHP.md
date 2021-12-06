@@ -1,4 +1,6 @@
-# Ejercicio paddle
+# EJERCICIOS PHP (LABORATORIO 3)
+
+## Ejercicio paddle
 
 Una empresa se dedica al alquiler de canchas de paddle por horas.
 Dados los siguientes arrays:
@@ -30,5 +32,5 @@ debe indicarse al usuario (el nombre de la otra/s cancha).
 El programa solamente debe indicar la disponibilidad, allí termina el proceso.
 
 
-# Ejercicios libro "Programacion WEB para programadores"
+## Ejercicios libro "Programacion WEB para programadores"
 ![image](https://user-images.githubusercontent.com/62455807/144778680-5f7f246a-f6e3-4bfe-af14-6d84087cc1dc.png)
