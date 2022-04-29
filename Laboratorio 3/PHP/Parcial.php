@@ -15,7 +15,6 @@ Yo, --MARTIN--, declaro que el código desarrollado aquí abajo es de mi autorí
 
 ?>
 
-
 <?php if(isset($_GET["linea_value"])) { ?>
     
     <?php if( $_GET["monto"] > $detalle[$_GET["linea_value"]]['maximo']) { ?>
@@ -26,12 +25,16 @@ Yo, --MARTIN--, declaro que el código desarrollado aquí abajo es de mi autorí
 
             <?php  $tasa_a_cobrar = ($_GET["monto"] * $detalle[$_GET["linea_value"]]['tasa']) / 100 ?>
             <?php  $monto_total = $_GET["monto"] + $tasa_a_cobrar ?>
-            <?php $mes_a_devolver = $_GET["meses"] + $detalle[$_GET["linea_value"]]['gracia']?>
+            <?php $mes_a_devolver = $_GET["meses"] + $detalle[$_GET["linea_value"]]['gracia'] + 1?>
 
             
 
             <?php if( $mes_a_devolver > 12) { ?>
-                <?php  $mes_a_devolver =  $detalle[$_GET["linea_value"]]['gracia'] - (12 - $_GET["meses"])  ?>
+                <?php  $mes_a_devolver =  ($detalle[$_GET["linea_value"]]['gracia'] - (12 - $_GET["meses"])) + 1 ?>
+            <?php } ?>
+
+            <?php if( $mes_a_devolver == 13) { ?>
+                <?php  $mes_a_devolver =  1 ?>
             <?php } ?>
 
             <p>El monto a devolver es: <?= $monto_total ?></p>
