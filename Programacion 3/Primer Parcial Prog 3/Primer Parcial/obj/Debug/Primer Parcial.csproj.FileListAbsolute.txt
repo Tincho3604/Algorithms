@@ -6,3 +6,10 @@ C:\Users\Matias\Desktop\Parcial\Primer Parcial\Primer Parcial\obj\Debug\Primer P
 C:\Users\Matias\Desktop\Parcial\Primer Parcial\Primer Parcial\obj\Debug\Primer Parcial.csproj.CoreCompileInputs.cache
 C:\Users\Matias\Desktop\Parcial\Primer Parcial\Primer Parcial\obj\Debug\Primer Parcial.exe
 C:\Users\Matias\Desktop\Parcial\Primer Parcial\Primer Parcial\obj\Debug\Primer Parcial.pdb
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Primer Parcial Prog 3\Primer Parcial\bin\Debug\Primer Parcial.exe.config
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Primer Parcial Prog 3\Primer Parcial\bin\Debug\Primer Parcial.exe
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Primer Parcial Prog 3\Primer Parcial\bin\Debug\Primer Parcial.pdb
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Primer Parcial Prog 3\Primer Parcial\obj\Debug\Primer Parcial.csproj.AssemblyReference.cache
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Primer Parcial Prog 3\Primer Parcial\obj\Debug\Primer Parcial.csproj.CoreCompileInputs.cache
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Primer Parcial Prog 3\Primer Parcial\obj\Debug\Primer Parcial.exe
+C:\Users\Tincho\Desktop\Archivos\Repositorios\Algorithms\Programacion 3\Primer Parcial Prog 3\Primer Parcial\obj\Debug\Primer Parcial.pdb

@@ -78,9 +78,9 @@ namespace Primer_Parcial {
 
         // Punto 8
         public string darDatos() {
-
+          
            string warningCobro = _distanciaRecorrida < _kilometrajeMinimo ? "¡ATENCION! Se cobro el precio por kilometraje mínimo." : "";
-
+            Console.WriteLine("VALOR " + warningCobro);
             return "Costo por kilometro: " + _costoPorKilometro + " Kilometraje Minimo: " + _kilometrajeMinimo + " Dominio: " + _dominio + " Distancia Recorrida: " + _distanciaRecorrida + " Precio Final: " + _precioFinal + warningCobro;
 
         }
